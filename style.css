@@ -1,0 +1,81 @@
+:root {
+    --bg: #000;
+    --mg: #222;
+    --fg: #f8f8f8;
+    --hl: #1e7562;
+    --border: 1px dashed #444;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 1366px;
+    height: 768px;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+main {
+    opacity: 0;
+    width: 1366px;
+    height: 0;
+    position: relative;
+    transition: opacity 0.75s;
+}
+
+#output-container {
+    width: 80%;
+    height: 180px;
+    margin: 0 10%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    border: var(--border);
+}
+#output {
+    flex: 1;
+    border-right: var(--border);
+    overflow-y: scroll;
+    padding: 8px;
+}
+#right {
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+}
+#strokes {
+    padding: 8px;
+    overflow-y: scroll;
+    margin: 0;
+    border-bottom: var(--border);
+    flex: 1;
+}
+button {
+    background: var(--mg);
+    color: var(--fg);
+    border: none;
+    margin: 8px;
+    padding: 8px;
+}
+
+canvas {
+    position: absolute;
+    width: 1366px;
+    height: 768px;
+    z-index: 1;
+}
+
+section {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main>
+        <div id="output-container">
+            <div id="output"></div>
+            <div id="right">
+                <pre id="strokes"></pre>
+                <div id="actions">
+                    <button id="clear">clear</button>
+                    <button id="copy-out">copy output</button>
+                </div>
+            </div>
+        </div>
+        <canvas width="1366" height="768"></canvas>
+    </main>
+    <section>
+        <span>loading...</span>
+    </section>
+	<script src="english.js"></script>
+    <script>document.querySelector("section").innerHTML += "<span>wordlist loaded...</span>"</script>
+	<script src="dictionary.js"></script>
+    <script>document.querySelector("section").innerHTML += "<span>dictionary loaded...</span>"</script>
+	<script src="orthography.js"></script>
+    <script>document.querySelector("section").innerHTML += "<span>orthography loaded...</span>"</script>
+	<script src="steno.js"></script>
+    <script>document.querySelector("section").innerHTML += "<span>engine loaded...</span>"</script>
+	<script src="script.js"></script>
+</body>
+
+</html>
